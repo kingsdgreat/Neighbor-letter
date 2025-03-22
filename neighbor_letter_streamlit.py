@@ -112,9 +112,9 @@ def main():
                 'Property State',
                 'APN',
                 'GPS Coordinates',
-                'Neighbor APN'
+                'Neighbor APN',
                 'Mail Date',
-                'Unique Code',       
+                'Unique Code'      
             ]
 
             df_selected = df_selected[output_columns]
