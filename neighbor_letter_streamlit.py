@@ -58,7 +58,8 @@ def main():
                 'Mailing State': 'State',
                 'Mailing Zip': 'Zip',
                 'County': 'Property County',
-                'State': 'Property State'
+                'State': 'Property State',
+                'APN': 'Neighbor APN'
             }
 
             missing_columns = set(column_mapping.keys()) - set(df.columns)
@@ -111,8 +112,9 @@ def main():
                 'Property State',
                 'APN',
                 'GPS Coordinates',
+                'Neighbor APN'
                 'Mail Date',
-                'Unique Code'
+                'Unique Code',       
             ]
 
             df_selected = df_selected[output_columns]
