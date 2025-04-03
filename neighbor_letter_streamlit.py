@@ -90,6 +90,11 @@ def main():
             tomorrow = datetime.now() + timedelta(days=1)
             df_selected['Mail Date'] = tomorrow.strftime('%b %d, %Y')
 
+            # Calculate End Date: 20 days after Mail Date
+            end_date = tomorrow + timedelta(days=20)
+            df_selected['End Date'] = end_date.strftime('%b %d, %Y')
+
+
             df_selected = df_selected.drop_duplicates(subset=['Mailing Address', 'City', 'State', 'Zip'])
 
             # Reset index before assigning unique codes
@@ -114,6 +119,7 @@ def main():
                 'GPS Coordinates',
                 'Neighbor APN',
                 'Mail Date',
+                'End Date',
                 'Unique Code'      
             ]
 
